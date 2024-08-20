@@ -1,6 +1,6 @@
 # Projeto React TS
 
-Projeto limpo para ser usados nas aulas.
+Projeto limpo para ser usado nas aulas.
 
 #### Instruções de uso
 
