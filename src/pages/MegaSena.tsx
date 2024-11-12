@@ -5,7 +5,7 @@ export default function Mega() {
   const { megasena } = useLotteryContext();
 
   if (!megasena) {
-    return <div>Carregando...</div>;
+    return <Wrapper>Carregando...</Wrapper>;
   }
 
   return (

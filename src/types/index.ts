@@ -1,9 +1,13 @@
 export interface LotteryContextProps {
   megasena: Props | undefined;
+  quina: Props | undefined;
+  timemania: Props | undefined;
 }
 
 export interface LotteryProps {
   megasena: Props;
+  quina: Props;
+  timemania: Props;
 }
 
 export interface Props {
