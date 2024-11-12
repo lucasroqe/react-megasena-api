@@ -1,8 +1,11 @@
+import MainPage from "./pages/MainPage";
+import {LotteryProvider} from './contexts/LotteryContext'
+
 function App() {
   return (
-    <div>
-      Olá!
-    </div>
+    <LotteryProvider>
+      <MainPage/>
+    </LotteryProvider>
   );
 }
 
