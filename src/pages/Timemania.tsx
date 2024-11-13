@@ -10,7 +10,7 @@ export default function Timemania() {
 
   return (
     <Wrapper>
-      <Title>TIME MANIA</Title>
+      <Title>TIMEMANIA</Title>
       <ListaBolas>
         {timemania.dezenas.map((dezena) => (
           <Bolas>{dezena}</Bolas>
@@ -44,6 +44,7 @@ const Bolas = styled.div`
 const ListaBolas = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 1rem 0;
   gap: 0.8rem;
 `;

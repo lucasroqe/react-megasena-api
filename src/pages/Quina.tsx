@@ -33,17 +33,18 @@ const Title = styled.div`
 `
 
 const Bolas = styled.div`
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #260085;
-    color: #fff;
-    border-radius: 25px;
-    padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #260085;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px;
 `;
 
 const ListaBolas = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 1rem 0;
   gap: 0.8rem;
 `;

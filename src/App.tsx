@@ -1,12 +1,22 @@
-import MainPage from "./pages/MainPage";
-import {LotteryProvider} from './contexts/LotteryContext'
+import { LotteryProvider } from "./contexts/LotteryContext";
+import styled from "styled-components";
+import LotteryRoute from "./routes";
 
 function App() {
   return (
-    <LotteryProvider>
-      <MainPage/>
-    </LotteryProvider>
+    <Wrapper>
+      <LotteryProvider>
+        <LotteryRoute/>
+      </LotteryProvider>
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`

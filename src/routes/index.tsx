@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MegaSena from "../pages/MegaSena";
+import Mega from "../pages/Mega";
 import Quina from "../pages/Quina";
 import Timemania from "../pages/Timemania";
 import Menu from "../components/Menu";
@@ -12,8 +12,8 @@ export default function LotteryRoute() {
         <Menu />
         <Box>
           <Routes>
-            <Route path="/" element={<MegaSena />} />
-            <Route path="/mega" element={<MegaSena />} />
+            <Route path="/" element={<Mega />} />
+            <Route path="/mega" element={<Mega />} />
             <Route path="/quina" element={<Quina />} />
             <Route path="/timemania" element={<Timemania />} />
           </Routes>
@@ -33,5 +33,7 @@ const Box = styled.div`
   border: 1px solid gray;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   border-radius: 15px;
+  width: 20rem;
 `;

@@ -44,6 +44,7 @@ const Bolas = styled.div`
 const ListaBolas = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 1rem 0;
   gap: 0.8rem;
 `;
