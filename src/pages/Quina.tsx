@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useLotteryContext from "../hooks/useLotteryContext";
+import Ball from "../components/Ball";
 
 export default function Quina() {
   const { quina } = useLotteryContext();
@@ -13,7 +14,7 @@ export default function Quina() {
       <Title>QUINA</Title>
       <ListaBolas>
         {quina.dezenas.map((dezena) => (
-          <Bolas>{dezena}</Bolas>
+          <Ball key={dezena}>{dezena}</Ball>
         ))}
       </ListaBolas>
       {quina.dataPorExtenso}
@@ -28,17 +29,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-    font-weight: bold;
-    font-size: 1.5rem;
-`
-
-const Bolas = styled.div`
-  font-size: 18px;
   font-weight: bold;
-  background-color: #260085;
-  color: #fff;
-  border-radius: 25px;
-  padding: 10px;
+  font-size: 1.5rem;
 `;
 
 const ListaBolas = styled.div`

@@ -3,11 +3,16 @@ import Mega from "../pages/Mega";
 import Quina from "../pages/Quina";
 import Timemania from "../pages/Timemania";
 import Menu from "../components/Menu";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import useLotteryContext from "../hooks/useLotteryContext";
 
 export default function LotteryRoute() {
+
+  const  {theme} = useLotteryContext();
+  
   return (
     <Wrapper>
+      <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Menu />
         <Box>
@@ -19,6 +24,7 @@ export default function LotteryRoute() {
           </Routes>
         </Box>
       </BrowserRouter>
+      </ThemeProvider>
     </Wrapper>
   );
 }

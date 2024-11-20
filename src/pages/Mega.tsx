@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useLotteryContext from "../hooks/useLotteryContext";
+import Ball from "../components/Ball";
 
 export default function Mega() {
   const { megasena } = useLotteryContext();
@@ -13,7 +14,7 @@ export default function Mega() {
       <Title>MEGA-SENA</Title>
       <ListaBolas>
         {megasena.dezenas.map((dezena) => (
-          <Bolas>{dezena}</Bolas>
+          <Ball key={dezena}>{dezena}</Ball>
         ))}
       </ListaBolas>
       {megasena.dataPorExtenso}
@@ -31,15 +32,6 @@ const Title = styled.div`
     font-weight: bold;
     font-size: 1.5rem;
 `
-
-const Bolas = styled.div`
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #209869;
-    color: #fff;
-    border-radius: 25px;
-    padding: 10px;
-`;
 
 const ListaBolas = styled.div`
   display: flex;

@@ -2,6 +2,13 @@ export interface LotteryContextProps {
   megasena: Props | undefined;
   quina: Props | undefined;
   timemania: Props | undefined;
+  theme: ThemeProps;
+  setTheme: (value: ThemeProps) => void;
+}
+
+export interface ThemeProps{
+  background: string;
+  color: string;
 }
 
 export interface LotteryProps {

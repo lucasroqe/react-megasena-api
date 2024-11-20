@@ -1,17 +1,23 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import useLotteryContext from "../hooks/useLotteryContext";
+import { mega, quina, timemania } from "../themes";
 
 export default function Menu() {
+
+  const { setTheme } = useLotteryContext();
+
   return (
     <Wrapper>
       <Button>
-        <Link to="mega">MegaSena</Link>
+        <Link to="mega" onClick={()=> setTheme(mega)}>MegaSena</Link>
       </Button>
       <Button>
-        <Link to="quina">Quina</Link>
+        <Link to="quina" onClick={()=> setTheme(quina)}>Quina</Link>
       </Button>
       <Button>
-        <Link to="timemania">Timemania</Link>
+        <Link to="timemania" onClick={()=> setTheme(timemania)}>Timemania</Link>
       </Button>
     </Wrapper>
   );

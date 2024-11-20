@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useLotteryContext from "../hooks/useLotteryContext";
+import Ball from "../components/Ball";
 
 export default function Timemania() {
   const { timemania } = useLotteryContext();
@@ -13,7 +14,7 @@ export default function Timemania() {
       <Title>TIMEMANIA</Title>
       <ListaBolas>
         {timemania.dezenas.map((dezena) => (
-          <Bolas>{dezena}</Bolas>
+          <Ball key={dezena}>{dezena}</Ball>
         ))}
       </ListaBolas>
       {timemania.dataPorExtenso}
@@ -28,17 +29,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-    font-weight: bold;
-    font-size: 1.5rem;
-`
-
-const Bolas = styled.div`
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #FFF600;
-    color: #049645;
-    border-radius: 25px;
-    padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
 `;
 
 const ListaBolas = styled.div`
